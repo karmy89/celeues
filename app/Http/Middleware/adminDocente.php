@@ -4,7 +4,6 @@ namespace App\Http\Middleware;
 
 use Closure;
 
-use Illuminate\Support\Facades\Response;
 class adminDocente
 {
     /**
@@ -26,7 +25,7 @@ class adminDocente
         
         if($usuarioActual->tipo==$x || $usuarioActual->tipo==$y && \Auth::check())
         {
-           // return Response::json($admin);
+            //return Response::json($admin);
             return $next($request);
         }
         /*else if($usuarioActual->cargo==2 && \Auth::check()){

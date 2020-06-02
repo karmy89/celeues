@@ -2,7 +2,7 @@
   $("#btnnuevo").click(function(){
       
     $('#btnGuardar').val("add");
-    $("#btnGuardar").html("Guardar");
+    $("#btnGuardar").html("Nuevo");
     $("#btnGuardar").removeClass("btn-mint");
     $("#modalIngresoHeader").removeClass("alert-mint");
     $("#modalIngresoLabel").html("Registro de Grupos");
