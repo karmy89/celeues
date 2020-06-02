@@ -40,11 +40,7 @@
 	  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 	  <ul class="breadcrumb">
 	    <li><a href=""><i class="demo-pli-home"></i></a></li>
-
-		@if(Auth::user()->tipo=="ADMIN")
-	    <li><a href="">Inscripcíon</a></li>
-		@endif
-
+	    <li><a href="">Inscripcion</a></li>
 	    <li class=""><a href="{{url('/')}}/grupos">Grupos</a></li>
 	    <li class="active">Estudiantes</li>
 	  </ul>
@@ -88,7 +84,7 @@
 							<br>
 							<br>
 							<div class=" col-md-12">
-								<label  class="control-label text-main text-bold col-md-4 text-sm">CATEGORÍA: </label>
+								<label  class="control-label text-main text-bold col-md-4 text-sm">CATEGORIA: </label>
 								<label class="control-label  text-bold col-md-8 text-capitalize">{{strtoupper($grupo->nivels->categorias->nombre)}}</label>
 							</div>
 							<br>
@@ -237,16 +233,15 @@
 
 						
 					<div class="row">
-					@if(Auth::user()->tipo=="ADMIN")
+						
 						<div class="col-sm-12 table-toolbar-right">
 							<button id="btnnuevo" class="btn btn-purple" ><i class="demo-pli-add"></i> Agregar Estudiante</button>
 
-						{{--	<button class="btn btn-default btn-mint addPonderacion" value="0" type="button" >Ponderación</button>
+						{{--	<button class="btn btn-default btn-mint addPonderacion" value="0" type="button" >Ponderacion</button>
 
 							<button class="btn btn-default imprimir" ><i class="demo-pli-printer icon-sm add-tooltip" data-original-title="Imprimir" data-container="body"></i></button>
 							--}}
 						</div>
-						@endif
 						<div class="col-sm-6 table-toolbar-right">
 							
 						</div>
@@ -315,11 +310,7 @@
 									
 									<th width="15%">Usuario</th>
 									<th width="10%">Estado</th>
-
-									
-					@if(Auth::user()->tipo=="ADMIN")
-									<th width="30%" style="text-align: center;">Accíon </th>
-					@endif
+									<th width="30%" style="text-align: center;">Accion </th>
 
 				                        {{--<th>nota</th>
 				                        
@@ -397,7 +388,6 @@
 						                        	<span id="estado1" class="label bg-info text-sm">{{$estudiantegrupo->estadoEstudiante}}</span>
 						                         @endif
 					                        </td>
-											@if(Auth::user()->tipo=="ADMIN")
 					                        <td align="center">
 <!--<button class="btn btn-default btn-trans btn-sm  btn-hover infoModal add-tooltip " data-original-title="Asignar" data-container="body" value="" ="true"><i class="pli-dollar-sign icon-md "></i> </button>
 
@@ -423,7 +413,6 @@
 					                        	@endif
 
 					                        </td>
-											@endif
 					                        
             						</tr>
  								@empty
@@ -458,7 +447,6 @@
 
 	
 
-	@if(Auth::user()->tipo=="ADMIN")
 
 	<!--Default Bootstrap Modal-->
 	<!--===================================================-->
@@ -497,12 +485,12 @@
 			<div class="modal-content">
 				<div class="modal-header alert-info">
 					<button type="button" class="close" data-dismiss="modal"><i class="pci-cross pci-circle"></i></button>
-					<h4 class="modal-title" style="color: white;" id="myLargeModalLabel">Información Estudiante</h4>
+					<h4 class="modal-title" style="color: white;" id="myLargeModalLabel">Informacion Estudiante</h4>
 				</div>
 				<div class="modal-body">
 					<div class="panel-body">
 						<div class="table-responsive">
-						<h6 class="card-subtitle mb-2 text-muted" style="font-weight:bold;">Información Estudiante</h6>
+						<h6 class="card-subtitle mb-2 text-muted" style="font-weight:bold;">Informacion Estudiante</h6>
             			
 						<table   class="table {{--table-bordered--}} table-striped table-sm " align="center">
             					<tbody id="tablainfo">
@@ -539,12 +527,12 @@
 			<div class="modal-content">
 				<div id="modalMsjDiv" class="modal-header alert-danger">
 					<button type="button" class="close" data-dismiss="modal"><i class="pci-cross pci-circle"></i></button>
-					<h4 class="modal-title" style="color: white;" id="modalMsjLabel">Cambio Estado de Categoría</h4>
+					<h4 class="modal-title" style="color: white;" id="modalMsjLabel">Cambio Estado de Categoria</h4>
 				</div>
 				<div class="modal-body">
 					<div class="panel-body">
 						<h5 class="card-subtitle mb-2 text-muted col-md-12" style="font-weight:bold;">
-					<div id="msjAB"><p>Esta seguro de continuar con la acción?.</p>
+					<div id="msjAB"><p>Esta seguro de continuar con la accion?.</p>
 					</div>
 					</h5>
             			{{-- Este funciona para darle valor del id para dar baja o alta--}}
@@ -651,7 +639,7 @@
 	</div>
 	<!--===================================================-->
 	<!--End Large Bootstrap Modal-->
- @endif
+
 
 
 	@endsection
